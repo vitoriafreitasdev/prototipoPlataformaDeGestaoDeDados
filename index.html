@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plataforma de gestão de dados pessoais</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div id="mainCont">
+        <h1>Plataforma de Gestão de Dados Pessoais</h1>
+        <div class="hideFormEnt">
+            <form id="dadosEnt">
+                <label for="name">Nome completo: </label>
+                <input type="text" id="name" required>
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" required>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" required>
+                <button id="entrar">Entrar</button>
+                <p>Não tem conta? Cadastre-se clicando em baixo.</p>
+                <button id="cadastrar">Cadastrar</button>
+            </form>
+        </div>
+       <div class="hideCadastro">
+        <form id="dadosForms">
+            <label for="nomeCadastro">Nome:</label>
+            <input required type="text" id="nomeCadastro">
+            <label for="emailCadastro">E-mail:</label>
+            <input required type="email" id="emailCadastro">
+            <label for="senhaCadastro">Senha:</label>
+            <input required type="password" id="senhaCadastro">
+            <label for="passwordConfirm">Confirmar senha:</label>
+            <input required type="password" id="passwordConfirm">
+            <label for="dataNasCadastro">Data de nascimento: </label>
+            <input required type="date" id="dataNasCadastro">
+            <label for="cpfCadastro">CPF: </label>
+            <input required type="text" id="cpfCadastro">
+            <label for="RGCadastro">RG: </label>
+            <input required type="text" id="RGCadastro">
+            <label for="naciCadastro">Nacionalidade: </label>
+            <input required type="text" id="naciCadastro">
+            <label for="estadoCivilCadastro">Estado civil: </label>
+            <input required type="text" id="estadoCivilCadastro">   
+            <button id="enviar">Enviar</button>
+        </form> 
+       </div>
+       <div class="hideDados">
+        <form id="dadosCadastrados">
+            <h2>Dados já cadastrados</h2>
+            <label for="dataNas">Data de nascimento: </label>
+            <input required type="date" id="dataNas">
+            <label for="cpf">CPF: </label>
+            <input required type="text" id="cpf">
+            <label for="RG">RG: </label>
+            <input required type="text" id="RG">
+            <label for="nacionalidade">Nacionalidade: </label>
+            <input required type="text" id="nacionalidade">
+            <label for="estadoCivil">Estado civil: </label>
+            <input required type="text" id="estadoCivil">
+            <button id="editar">Salvar</button>
+        </form> 
+       </div>
+    </div>
+</body>
+</html>

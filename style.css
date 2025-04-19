@@ -1,0 +1,80 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#mainCont{
+    margin: 1rem;
+    background-color: #00C2D1;
+    width: 700px;
+    height: 1000px;
+    border-radius: 1rem;
+}
+h1{
+    text-align: center;
+    background-color: #0A1045;
+    color: #fff;
+    padding: 1rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+#dadosEnt{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+input, label{
+    padding: 0.5rem;
+    margin: 5px;
+}
+#dadosForms{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    
+    margin: 0 auto;
+}
+#dadosCadastrados{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+}
+#enviar, #entrar, #cadastrar, #editar{
+    padding: 0.5rem;
+    width: 250px;
+    background-color: #EDE5A6;
+    border: none;
+    border-radius: 1rem;
+    margin: 0 auto;
+}
+#enviar:hover, #entrar:hover, #cadastrar:hover, #editar:hover{
+    background-color: #e9e3b9;
+}
+p{
+    margin: 10px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+    margin: 1rem;
+    color: #fff;
+}
+.hideCadastro{
+    display: none;
+}
+.hideFormEnt{
+    display: block;
+}
+.hideDados{
+    display: none;
+}
