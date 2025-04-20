@@ -81,9 +81,35 @@ h2{
 }
 @media (max-width: 800px) {
     body{
-        width: 800px;
+        width: 700px;
     }
     #mainCont{
         width: 500px;
+    }
+}
+
+@media (max-width: 400px) {
+    body{
+        width: 350px;
+    }
+    #mainCont{
+        width: 320px;
+    }
+    input{
+        width: 280px;
+    }
+    #enviar, #entrar, #cadastrar, #editar{
+        padding: 0.5rem;
+        width: 120px;
+        background-color: #EDE5A6;
+        border: none;
+        border-radius: 1rem;
+        
+    }
+    p{
+        width: 250px;
+    }
+    h2{
+        width: 250px;
     }
 }
