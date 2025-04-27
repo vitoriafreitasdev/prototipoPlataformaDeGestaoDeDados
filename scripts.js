@@ -209,15 +209,3 @@ editarBtn.addEventListener("click", () =>{
 
     
 })
-
-
-
-
-
-
-
-
-
-
-
-
