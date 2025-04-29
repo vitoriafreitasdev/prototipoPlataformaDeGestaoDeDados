@@ -94,9 +94,14 @@ function pegarDados() {
 }
 
 function salvar(dado){  // Recebe um objeto com todos os dados
-    const dados = pegarDados()
-    dados.push(dado)
-    localStorage.setItem("dados", JSON.stringify(dados)) 
+    try {
+        const dados = pegarDados();
+        dados.push(dado);
+        localStorage.setItem("dados", JSON.stringify(dados));
+    } catch (e) {
+        console.error("Erro ao salvar no localStorage:", e);
+        alert("Erro ao salvar. O armazenamento pode estar cheio ou sem suporte.");
+    }
 }
 
 function atualizarLocalStorage(usuarioAtualizado){
@@ -157,36 +162,42 @@ enviarBtn.addEventListener("click", (e) => {
     
 })
 
-entrarBtn.addEventListener("click", (e) =>{
+entrarBtn.addEventListener("click", handleEntrar);
+entrarBtn.addEventListener("touchstart", handleEntrar);
+function handleEntrar(e){
     e.preventDefault()
     
-     // Pega os dados salvos no localStorage
-     const dadosSalvos = pegarDados();
-     const usuario = dadosSalvos.find(user => user.email === emailInput.value)
+    // Pega os dados salvos no localStorage
+    const dadosSalvos = pegarDados();
+    const usuario = dadosSalvos.find(user => user.email === emailInput.value)
 
-     if(usuario) {
-        const senhaDescriptografada = descriptografar(usuario.senha);
-         if(nameInput.value === usuario.nome && senhaInput.value === senhaDescriptografada) {
-             
-                hideFormEnt.style.display = "none";
-                hideCadastro.style.display = "none";
-                hideDados.style.display = "block";
+    if(usuario) {
+       const senhaDescriptografada = descriptografar(usuario.senha);
+        if(nameInput.value === usuario.nome && senhaInput.value === senhaDescriptografada) {
+            
+               hideFormEnt.style.display = "none";
+               hideCadastro.style.display = "none";
+               hideDados.style.display = "block";
 
-                dataNas.value = usuario.dataNascimento;
-            cpf.value = descriptografar(usuario.cpf);
-            RG.value = descriptografar(usuario.rg);
-            nacionalidade.value = usuario.nacionalidade;
-            estadoCivil.value = usuario.estadoCivil;
-             
-         } else {
-             alert("Credenciais inválidas");
-         }
-     } else {
-         alert("Nenhum usuário cadastrado");
-     }
+               dataNas.value = usuario.dataNascimento;
+           cpf.value = descriptografar(usuario.cpf);
+           RG.value = descriptografar(usuario.rg);
+           nacionalidade.value = usuario.nacionalidade;
+           estadoCivil.value = usuario.estadoCivil;
+            
+        } else {
+            alert("Credenciais inválidas");
+        }
+    } else {
+        alert("Nenhum usuário cadastrado");
+    }
+}
+/*
+entrarBtn.addEventListener("click", (e) =>{
+   
 
-    // proximo passo: fazer o botao editar funcionar
-})
+   
+})*/
 
 editarBtn.addEventListener("click", () =>{
 

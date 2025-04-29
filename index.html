@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,6 +7,11 @@
     <title>plataforma de gestão de dados pessoais</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+        if (typeof CryptoJS === 'undefined') {
+            alert("Erro: Biblioteca de criptografia não carregada. Recarregue a página.");
+        }
+    </script>
     <script src="scripts.js" defer></script>
 </head>
 <body>
