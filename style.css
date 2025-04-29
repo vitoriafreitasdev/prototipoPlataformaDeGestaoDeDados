@@ -79,24 +79,47 @@ h2{
 .hideDados{
     display: none;
 }
-@media (max-width: 800px) {
-    body{
-        width: 700px;
+@media (max-width: 500px) {
+    html, body{
+        max-width: 100%;
+        overflow-x: hidden;
     }
     #mainCont{
-        width: 500px;
+        width: 400px;
+    }
+    input{
+        width: 350px;
+    }
+    #enviar, #entrar, #cadastrar, #editar{
+        padding: 0.5rem;
+        width: 200px;
+        background-color: #EDE5A6;
+        border: none;
+        border-radius: 1rem;
+        
+    }
+    p{
+        width: 300px;
+        font-size: 1rem;
+    }
+    h1{
+        font-size: 1.5rem;
     }
 }
 
 @media (max-width: 400px) {
-    body{
-        width: 350px;
+    html, body{
+        max-width: 100%;
+        overflow-x: hidden;
     }
     #mainCont{
         width: 320px;
     }
     input{
         width: 280px;
+    }
+    label{
+        font-size: 0.9rem;
     }
     #enviar, #entrar, #cadastrar, #editar{
         padding: 0.5rem;
@@ -108,8 +131,9 @@ h2{
     }
     p{
         width: 250px;
+        font-size: 0.9rem;
     }
-    h2{
-        width: 250px;
+    h1{
+        font-size: 1rem;
     }
 }
